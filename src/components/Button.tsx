@@ -7,16 +7,16 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "default" | "small";
 }
 
-const sizeTypeStyles = {
+const sizeStyles = {
   default: "py-3 px-6 text-base",
   small: "py-2 px-4 text-sm",
 };
 
-const variantTypeStyles = {
+const variantStyles = {
   default:
-    "bg-primary-500 text-white hover:bg-primary-600 disabled:bg-primary-100 disabled:text-primary-400",
+    "bg-primary-500 text-white hover:bg-primary-600 disabled:bg-primary-100 disabled:text-primary-400 active:bg-primary-700",
   outlined:
-    "border border-primary-500 text-primary-500 hover:border-primary-600 hover:text-primary-600 disabled:border-primary-200 disabled:text-primary-200",
+    "border border-primary-500 text-primary-500 hover:border-primary-600 hover:text-primary-600 disabled:border-primary-200 disabled:text-primary-200 active:border-primary-700 active:text-primary-700",
 };
 
 export function Button({
@@ -30,8 +30,8 @@ export function Button({
     <button
       className={clsx(
         "w-full rounded-3xl font-semibold duration-300",
-        variantTypeStyles[variant],
-        sizeTypeStyles[size],
+        variantStyles[variant],
+        sizeStyles[size],
         className
       )}
       {...props}
