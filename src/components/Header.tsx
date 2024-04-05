@@ -1,17 +1,25 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 import { Button } from "./Button";
+import { MobileMenu } from "./MobileMenu";
 import { MenuIcon } from "./Icons/MenuIcon";
 
 import Logo from "../assets/logo.png";
 
 export function Header() {
+  const [isMobileMenu, setIsMobileMenu] = useState(false);
+
   return (
-    <header className="bg-black px-6 pt-3 pb-14">
+    <header id="home" className="bg-black px-6 pt-3 pb-14">
       <nav className="flex items-center justify-between">
         <Image src={Logo} alt="logo" />
 
-        <MenuIcon />
+        <button onClick={() => setIsMobileMenu(true)}>
+          <MenuIcon />
+        </button>
       </nav>
 
       <div className="flex flex-col items-center gap-3 mt-12">
@@ -29,6 +37,8 @@ export function Header() {
           <Button size="small">Start free trial</Button>
         </div>
       </div>
+
+      {isMobileMenu && <MobileMenu close={() => setIsMobileMenu(false)} />}
     </header>
   );
 }

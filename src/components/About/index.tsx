@@ -8,14 +8,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import RectangleAboutOne from "../../assets/rectangle-about-1.png";
 import RectangleAboutTwo from "../../assets/rectangle-about-2.png";
 import RectangleAboutThree from "../../assets/rectangle-about-3.png";
-import RectangleAboutFour from "../../assets/rectangle-about-4.png";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 export function About() {
   return (
-    <section className="bg-primary-500 px-6 py-10">
+    <section id="about" className="bg-primary-500 px-6 py-10">
       <p className="text-white leading-5 font-medium">
         At CloudBoost, we are committed to providing world-class cloud solutions
         for businesses of all sizes. From growing startups to established
@@ -57,10 +56,6 @@ export function About() {
 
           <SwiperSlide>
             <Image src={RectangleAboutThree} alt="image" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <Image src={RectangleAboutFour} alt="image" />
           </SwiperSlide>
         </Swiper>
       </div>

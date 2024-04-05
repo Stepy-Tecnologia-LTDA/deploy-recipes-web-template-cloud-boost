@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
+
 import { MinusIcon } from "@/components/Icons/MinusIcon";
 import { MoreIcon } from "@/components/Icons/MoreIcon";
-import { useState } from "react";
 
 interface QuestionsProps {
   title: string;

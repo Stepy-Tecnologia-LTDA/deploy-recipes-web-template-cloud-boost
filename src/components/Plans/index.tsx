@@ -3,33 +3,16 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
+import { plans } from "@/mocks/projects";
+
 import { PlansCard } from "./PlansCard";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
-const plans = [
-  {
-    planTitle: "Enterprise",
-    planPrice: "$20/month",
-  },
-  {
-    planTitle: "Starter",
-    planPrice: "$5/month",
-  },
-  {
-    planTitle: "Business",
-    planPrice: "$10/month",
-  },
-  {
-    planTitle: "Custom",
-    planPrice: "$15/month",
-  },
-];
-
 export function Plans() {
   return (
-    <section className="bg-white px-6 py-10">
+    <section id="plan" className="bg-white px-6 py-10">
       <h1 className="text-lg font-medium leading-6 text-neutral-950 text-center">
         Choose the Ideal Plan to Take Your Business to the Next Level with
         CloudBoost
@@ -54,7 +37,7 @@ export function Plans() {
         >
           {plans.map((plan) => {
             return (
-              <SwiperSlide key={plan.planPrice}>
+              <SwiperSlide key={plan.id}>
                 <PlansCard
                   planTitle={plan.planTitle}
                   planPrice={plan.planPrice}
