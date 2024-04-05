@@ -13,7 +13,10 @@ export function Header() {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
 
   return (
-    <header id="home" className="bg-black px-6 pt-3 pb-14">
+    <header
+      id="home"
+      className="bg-[url('../assets/background-image.png')] px-6 pt-3 pb-14"
+    >
       <nav className="flex items-center justify-between">
         <Image src={Logo} alt="logo" />
 
