@@ -11,10 +11,14 @@ interface MobileMenu {
 
 export function MobileMenu({ close }: MobileMenu) {
   return (
-    <div className="fixed inset-0 bg-black z-10 px-6 pt-3">
-      <header className="flex flex-col gap-6">
+    <div className="fixed inset-0 bg-black md:bg-black/70 z-10">
+      <header className="flex flex-col gap-6 px-6 pt-3 md:px-6 md:py-4 md:bg-black w-full h-full md:absolute md:right-0 max-w-md">
         <div className="flex items-center justify-between">
-          <Image src={Logo} alt="logo" />
+          <Image
+            src={Logo}
+            alt="logo"
+            className="md:w-40 md:h-7 md:object-cover"
+          />
 
           <button onClick={close}>
             <CloseIcon />
@@ -25,7 +29,7 @@ export function MobileMenu({ close }: MobileMenu) {
           <Link
             href="#home"
             onClick={close}
-            className="text-white text-sm active:text-primary-500 active:font-medium"
+            className="text-white text-sm active:text-primary-500 active:font-medium md:text-base"
           >
             Home
           </Link>
@@ -33,7 +37,7 @@ export function MobileMenu({ close }: MobileMenu) {
           <Link
             href="#resource"
             onClick={close}
-            className="text-white text-sm active:text-primary-500 active:font-medium"
+            className="text-white text-sm active:text-primary-500 active:font-medium md:text-base"
           >
             Resources
           </Link>
@@ -41,7 +45,7 @@ export function MobileMenu({ close }: MobileMenu) {
           <Link
             href="#plan"
             onClick={close}
-            className="text-white text-sm active:text-primary-500 active:font-medium"
+            className="text-white text-sm active:text-primary-500 active:font-medium md:text-base"
           >
             Plans and prices
           </Link>
@@ -49,7 +53,7 @@ export function MobileMenu({ close }: MobileMenu) {
           <Link
             href="#faq"
             onClick={close}
-            className="text-white text-sm active:text-primary-500 active:font-medium"
+            className="text-white text-sm active:text-primary-500 active:font-medium md:text-base"
           >
             FAQs
           </Link>
@@ -57,7 +61,7 @@ export function MobileMenu({ close }: MobileMenu) {
           <Link
             href="#about"
             onClick={close}
-            className="text-white text-sm active:text-primary-500 active:font-medium"
+            className="text-white text-sm active:text-primary-500 active:font-medium md:text-base"
           >
             About Us
           </Link>
@@ -65,13 +69,17 @@ export function MobileMenu({ close }: MobileMenu) {
           <Link
             href="#contact"
             onClick={close}
-            className="text-white text-sm active:text-primary-500 active:font-medium"
+            className="text-white text-sm active:text-primary-500 active:font-medium md:text-base"
           >
             Contact
           </Link>
         </nav>
 
-        <Button size="small">Start free trial</Button>
+        <Button className="md:hidden" size="small">
+          Start free trial
+        </Button>
+
+        <Button className="hidden md:block">Start free trial</Button>
       </header>
     </div>
   );
