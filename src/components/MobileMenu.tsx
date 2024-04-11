@@ -17,7 +17,7 @@ export function MobileMenu({ close }: MobileMenu) {
           <Image
             src={Logo}
             alt="logo"
-            className="md:w-40 md:h-7 md:object-cover"
+            className="w-32 h-7 md:w-40 object-contain"
           />
 
           <button onClick={close}>

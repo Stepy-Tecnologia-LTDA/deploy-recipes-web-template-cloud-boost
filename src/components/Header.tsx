@@ -14,16 +14,16 @@ export function Header() {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
 
   return (
-    <div className="bg-[url('../assets/background-image.png')] lg:bg-[url('../assets/background-desktop.png')]">
+    <div className="bg-[url('../assets/background-image.png')] md:bg-[url('../assets/background-desktop.png')]">
       <header
         id="home"
-        className="container mx-auto max-w-screen-2xl px-6 pt-3 pb-12 md:px-8 md:pb-24 lg:px-12 lg:pt-5 lg:pb-52"
+        className="container mx-auto max-w-screen-2xl px-6 pt-3 pb-12 md:px-8 md:pt-4 md:pb-24 lg:px-12 lg:pt-5 lg:pb-52"
       >
         <nav className="flex items-center justify-between">
           <Image
             src={Logo}
             alt="logo"
-            className="md:w-40 md:h-7 md:object-cover lg:h-8 lg:w-44 lg:object-cover"
+            className="w-32 h-7 md:w-40 object-contain"
           />
 
           <button className="lg:hidden" onClick={() => setIsMobileMenu(true)}>
