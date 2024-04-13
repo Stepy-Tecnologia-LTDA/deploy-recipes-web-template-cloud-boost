@@ -1,46 +1,56 @@
+import { ReactNode } from "react";
 import { Button } from "../Button";
-import { CheckIcon } from "../Icons/CheckIcon";
+import clsx from "clsx";
 
 interface PlansCardProps {
-  planTitle: string;
-  planPrice: string;
+  title: string;
+  price: string;
+  infos: { id: number; icon: ReactNode; info: string }[] | undefined;
+  color: boolean;
 }
 
-export function PlansCard({ planTitle, planPrice }: PlansCardProps) {
+export function PlansCard({ title, price, infos, color }: PlansCardProps) {
   return (
-    <div className="w-full h-[430px] bg-primary-050 px-4 py-8 rounded-2xl flex flex-col gap-6">
-      <h1 className="text-lg leading-6 font-medium text-neutral-950 text-center">
-        {planTitle}
+    <div
+      className={clsx(
+        "w-full h-[430px] px-4 py-8 rounded-2xl flex flex-col gap-6",
+        color ? "bg-primary-500" : "bg-primary-050"
+      )}
+    >
+      <h1
+        className={clsx(
+          "text-lg leading-6 font-medium text-center",
+          color ? "text-white" : "text-neutral-950"
+        )}
+      >
+        {title}
         <br />
-        {planPrice}
+        {price}
       </h1>
 
-      <div className="flex items-start flex-col gap-3">
-        <div className="flex items-center gap-2">
-          <CheckIcon />
+      <div className="flex flex-col gap-3">
+        {infos?.map((item) => (
+          <div key={item.id} className="flex items-center gap-2">
+            {item.icon}
 
-          <span className="text-sm text-neutral-800">Storage: 50MB</span>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <CheckIcon />
-
-          <span className="text-sm text-neutral-800">
-            Data Transfer: 100 GB/month
-          </span>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <CheckIcon />
-
-          <span className="text-sm text-neutral-800">
-            Technical Support: Email
-          </span>
-        </div>
+            <span
+              className={clsx(
+                "text-sm",
+                color ? "text-white" : "text-neutral-800"
+              )}
+            >
+              {item.info}
+            </span>
+          </div>
+        ))}
       </div>
 
       <div className="absolute bottom-8 max-w-32 self-center">
-        <Button variant="outlined" size="small">
+        <Button
+          variant="outlined"
+          size="small"
+          className={clsx(color ? "bg-white" : "")}
+        >
           Get Started
         </Button>
       </div>
