@@ -145,34 +145,6 @@ export const faqs = [
 export const plans = [
   {
     id: 1,
-    title: "Enterprise",
-    price: "$20/month",
-    infos: [
-      {
-        id: 1,
-        icon: <CheckIcon color="white" />,
-        info: "Storage: 1 TB",
-      },
-      {
-        id: 2,
-        icon: <CheckIcon color="white" />,
-        info: "Data Transfer: 1 TB/month",
-      },
-      {
-        id: 3,
-        icon: <CheckIcon color="white" />,
-        info: "Technical Support: Email, Chat and Telephone (24/7)",
-      },
-      {
-        id: 4,
-        icon: <CheckIcon color="white" />,
-        info: "Advanced Features: Automated Backup, Advanced Security",
-      },
-    ],
-    color: true,
-  },
-  {
-    id: 2,
     title: "Starter",
     price: "$5/month",
     infos: [
@@ -195,7 +167,7 @@ export const plans = [
     color: false,
   },
   {
-    id: 3,
+    id: 2,
     title: "Business",
     price: "$10/month",
     infos: [
@@ -221,6 +193,34 @@ export const plans = [
       },
     ],
     color: false,
+  },
+  {
+    id: 3,
+    title: "Enterprise",
+    price: "$20/month",
+    infos: [
+      {
+        id: 1,
+        icon: <CheckIcon color="white" />,
+        info: "Storage: 1 TB",
+      },
+      {
+        id: 2,
+        icon: <CheckIcon color="white" />,
+        info: "Data Transfer: 1 TB/month",
+      },
+      {
+        id: 3,
+        icon: <CheckIcon color="white" />,
+        info: "Technical Support: Email, Chat and Telephone (24/7)",
+      },
+      {
+        id: 4,
+        icon: <CheckIcon color="white" />,
+        info: "Advanced Features: Automated Backup, Advanced Security",
+      },
+    ],
+    color: true,
   },
   {
     id: 4,

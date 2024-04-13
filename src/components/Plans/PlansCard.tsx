@@ -13,13 +13,13 @@ export function PlansCard({ title, price, infos, color }: PlansCardProps) {
   return (
     <div
       className={clsx(
-        "w-full h-[430px] px-4 py-8 rounded-2xl flex flex-col gap-6",
+        "w-full h-[430px] px-4 py-8 rounded-2xl flex flex-col gap-6 md:h-[562px] md:gap-10 md:px-6 md:py-9 lg:h-[604px] lg:gap-12 lg:px-8 lg:py-10",
         color ? "bg-primary-500" : "bg-primary-050"
       )}
     >
       <h1
         className={clsx(
-          "text-lg leading-6 font-medium text-center",
+          "text-lg leading-6 font-medium text-center md:text-2xl lg:text-3xl lg:leading-10",
           color ? "text-white" : "text-neutral-950"
         )}
       >
@@ -28,14 +28,14 @@ export function PlansCard({ title, price, infos, color }: PlansCardProps) {
         {price}
       </h1>
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 md:gap-4 lg:gap-5">
         {infos?.map((item) => (
           <div key={item.id} className="flex items-center gap-2">
             {item.icon}
 
             <span
               className={clsx(
-                "text-sm",
+                "text-sm md:text-base md:leading-5 lg:text-lg",
                 color ? "text-white" : "text-neutral-800"
               )}
             >
@@ -45,11 +45,18 @@ export function PlansCard({ title, price, infos, color }: PlansCardProps) {
         ))}
       </div>
 
-      <div className="absolute bottom-8 max-w-32 self-center">
+      <div className="absolute bottom-8 max-w-32 self-center lg:max-w-36 lg:bottom-10">
         <Button
           variant="outlined"
           size="small"
-          className={clsx(color ? "bg-white" : "")}
+          className={clsx("lg:hidden", color ? "bg-white" : "")}
+        >
+          Get Started
+        </Button>
+
+        <Button
+          variant="outlined"
+          className={clsx("hidden lg:block", color ? "bg-white" : "")}
         >
           Get Started
         </Button>
