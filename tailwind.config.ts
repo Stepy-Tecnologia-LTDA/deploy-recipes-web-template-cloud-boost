@@ -64,6 +64,10 @@ const config: Config = {
           "050": "#FEFCE8",
         },
       },
+
+      screens: {
+        "2xl": "1440px",
+      },
     },
   },
   plugins: [],

@@ -31,9 +31,7 @@ export function Faqs() {
         </div>
 
         <div className="hidden md:block mt-12 max-w-80 self-center lg:mt-16">
-          <Button variant="outlined" className="">
-            Have any questions? Get in touch
-          </Button>
+          <Button variant="outlined">Have any questions? Get in touch</Button>
         </div>
       </section>
     </div>

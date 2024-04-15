@@ -31,7 +31,7 @@ export function PlansCard({ title, price, infos, color }: PlansCardProps) {
       <div className="flex flex-col gap-3 md:gap-4 lg:gap-5">
         {infos?.map((item) => (
           <div key={item.id} className="flex items-center gap-2">
-            {item.icon}
+            <div className="shrink-0">{item.icon}</div>
 
             <span
               className={clsx(
