@@ -1,7 +1,8 @@
 import { faqs } from "@/mocks/projects";
+import { chunk } from "@/utils/Chunk";
 
-import { Questions } from "./components/Questions";
 import { Button } from "../Button";
+import { Questions } from "./components/Questions";
 
 export function Faqs() {
   return (
@@ -18,14 +19,20 @@ export function Faqs() {
           Find Quick Answers to Common Questions About Our Cloud Platform
         </h2>
 
-        <div className="flex flex-col gap-4 mt-6 md:mt-12 lg:mt-24 lg:grid lg:grid-cols-2">
-          {faqs.map((faq) => {
+        <div className="flex flex-col gap-4 mt-6 md:mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-6">
+          {chunk(faqs, 5).map((item) => {
             return (
-              <Questions
-                key={faq.id}
-                title={faq.title}
-                description={faq.description}
-              />
+              <div className="flex flex-col gap-4 lg:gap-6">
+                {item.map((faq) => {
+                  return (
+                    <Questions
+                      key={faq.id}
+                      title={faq.title}
+                      description={faq.description}
+                    />
+                  );
+                })}
+              </div>
             );
           })}
         </div>
