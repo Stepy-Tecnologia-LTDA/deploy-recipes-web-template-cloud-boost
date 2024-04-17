@@ -7,6 +7,7 @@ import { PreparationIcon } from "../components/Icons/PreparationIcon";
 import { ReachingIcon } from "../components/Icons/ReachingIcon";
 import { SharingIcon } from "../components/Icons/SharingIcon";
 import { VerifieldIcon } from "../components/Icons/VerifieldIcon";
+import { CheckIcon } from "@/components/Icons/CheckIcon";
 
 import EllipseOne from "../assets/ellipse-1.png";
 import EllipseTwo from "../assets/ellipse-2.png";
@@ -144,23 +145,110 @@ export const faqs = [
 export const plans = [
   {
     id: 1,
-    planTitle: "Enterprise",
-    planPrice: "$20/month",
+    title: "Starter",
+    price: "$5/month",
+    infos: [
+      {
+        id: 1,
+        icon: <CheckIcon />,
+        info: "Storage: 50 MB",
+      },
+      {
+        id: 2,
+        icon: <CheckIcon />,
+        info: "Data Transfer: 100 GB/month",
+      },
+      {
+        id: 3,
+        icon: <CheckIcon />,
+        info: "Technical Support: Email",
+      },
+    ],
+    color: false,
   },
   {
     id: 2,
-    planTitle: "Starter",
-    planPrice: "$5/month",
+    title: "Business",
+    price: "$10/month",
+    infos: [
+      {
+        id: 1,
+        icon: <CheckIcon />,
+        info: "Storage: 200 GB",
+      },
+      {
+        id: 2,
+        icon: <CheckIcon />,
+        info: "Data Transfer: 500 GB/month",
+      },
+      {
+        id: 3,
+        icon: <CheckIcon />,
+        info: "Technical Support: Email and Chat",
+      },
+      {
+        id: 4,
+        icon: <CheckIcon />,
+        info: "Advanced Features: Automated Backup",
+      },
+    ],
+    color: false,
   },
   {
     id: 3,
-    planTitle: "Business",
-    planPrice: "$10/month",
+    title: "Enterprise",
+    price: "$20/month",
+    infos: [
+      {
+        id: 1,
+        icon: <CheckIcon color="white" />,
+        info: "Storage: 1 TB",
+      },
+      {
+        id: 2,
+        icon: <CheckIcon color="white" />,
+        info: "Data Transfer: 1 TB/month",
+      },
+      {
+        id: 3,
+        icon: <CheckIcon color="white" />,
+        info: "Technical Support: Email, Chat and Telephone (24/7)",
+      },
+      {
+        id: 4,
+        icon: <CheckIcon color="white" />,
+        info: "Advanced Features: Automated Backup, Advanced Security",
+      },
+    ],
+    color: true,
   },
   {
     id: 4,
-    planTitle: "Custom",
-    planPrice: "$15/month",
+    title: "Custom",
+    price: "Price on request",
+    infos: [
+      {
+        id: 1,
+        icon: <CheckIcon />,
+        info: "On demand",
+      },
+      {
+        id: 2,
+        icon: <CheckIcon />,
+        info: "Data Transfer: On demand",
+      },
+      {
+        id: 3,
+        icon: <CheckIcon />,
+        info: "Technical Support: Personalized",
+      },
+      {
+        id: 4,
+        icon: <CheckIcon />,
+        info: "Advanced Features: Custom",
+      },
+    ],
+    color: false,
   },
 ];
 

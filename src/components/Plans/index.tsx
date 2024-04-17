@@ -12,41 +12,56 @@ import "swiper/css/pagination";
 
 export function Plans() {
   return (
-    <section id="plan" className="bg-white px-6 py-10">
-      <h1 className="text-lg font-medium leading-6 text-neutral-950 text-center">
-        Choose the Ideal Plan to Take Your Business to the Next Level with
-        CloudBoost
-      </h1>
+    <div className="bg-white">
+      <section
+        id="plan"
+        className="container mx-auto max-w-screen-2xl px-6 py-10 md:px-8 md:py-20 lg:px-12 lg:py-28"
+      >
+        <h1 className="text-lg font-medium leading-6 text-neutral-950 text-center md:text-2xl lg:text-3xl lg:leading-10">
+          Choose the Ideal Plan to Take Your Business to the Next Level with
+          CloudBoost
+        </h1>
 
-      <h2 className="text-sm font-medium text-neutral-600 text-center mt-2">
-        Our packages offer a variety of features to suitour customers' different
-        needs and budgets.
-      </h2>
+        <h2 className="text-sm font-medium text-neutral-600 text-center mt-2 md:text-base md:leading-5 lg:text-xl lg:leading-6 lg:mt-3">
+          Our packages offer a variety of features to suitour customers'
+          different needs and budgets.
+        </h2>
 
-      <div className="py-6">
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          slidesPerView={1}
-          spaceBetween={20}
-          loop={true}
-          pagination
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-        >
-          {plans.map((plan) => {
-            return (
-              <SwiperSlide key={plan.id}>
-                <PlansCard
-                  planTitle={plan.planTitle}
-                  planPrice={plan.planPrice}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-    </section>
+        <div className="pt-6 md:pt-14 lg:pt-24">
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            slidesPerView={1}
+            spaceBetween={20}
+            loop={true}
+            pagination
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              768: {
+                slidesPerView: 2.5,
+              },
+              1440: {
+                slidesPerView: 4,
+              },
+            }}
+          >
+            {plans.map((plan) => {
+              return (
+                <SwiperSlide key={plan.id}>
+                  <PlansCard
+                    color={plan.color}
+                    title={plan.title}
+                    price={plan.price}
+                    infos={plan.infos}
+                  />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+      </section>
+    </div>
   );
 }
