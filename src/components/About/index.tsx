@@ -67,13 +67,13 @@ export function About() {
           <br />
           With years of industry experience, our team of cloud experts is always
           looking to innovate and deliver the most advanced solutions to meet
-          our customers' ever-evolving needs. We're committed to providing not
+          our customers ever-evolving needs. We are committed to providing not
           only cutting-edge technology, but also exceptional support and
           personalized guidance every step of the way.
           <br />
           <br />
-          At CloudBoost, we believe that our customers' success is our success.
-          That's why we strive to be more than just a cloud services provider -
+          At CloudBoost, we believe that our customers success is our success.
+          That is why we strive to be more than just a cloud services provider -
           we are a trusted and dedicated partner, working side by side with our
           customers to drive their digital transformation and reach new heights
           of excellence.

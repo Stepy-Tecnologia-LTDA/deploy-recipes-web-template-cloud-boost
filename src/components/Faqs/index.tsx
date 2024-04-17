@@ -20,10 +20,10 @@ export function Faqs() {
         </h2>
 
         <div className="flex flex-col gap-4 mt-6 md:mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-6">
-          {chunk(faqs, 5).map((item) => {
+          {chunk(faqs, 5).map((faqGroup, faqGroupIndex) => {
             return (
-              <div className="flex flex-col gap-4 lg:gap-6">
-                {item.map((faq) => {
+              <div className="flex flex-col gap-4 lg:gap-6" key={faqGroupIndex}>
+                {faqGroup.map((faq) => {
                   return (
                     <Questions
                       key={faq.id}

@@ -23,7 +23,7 @@ export function Plans() {
         </h1>
 
         <h2 className="text-sm font-medium text-neutral-600 text-center mt-2 md:text-base md:leading-5 lg:text-xl lg:leading-6 lg:mt-3">
-          Our packages offer a variety of features to suitour customers'
+          Our packages offer a variety of features to suitour customers
           different needs and budgets.
         </h2>
 
