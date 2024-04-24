@@ -30,8 +30,8 @@ export function Plans() {
         <div className="pt-6 md:pt-14 lg:pt-24">
           <Swiper
             modules={[Pagination, Autoplay]}
-            slidesPerView={1}
-            spaceBetween={20}
+            slidesPerView={1.2}
+            spaceBetween={16}
             loop={true}
             pagination
             autoplay={{
@@ -41,9 +41,11 @@ export function Plans() {
             breakpoints={{
               768: {
                 slidesPerView: 2.5,
+                spaceBetween: 24,
               },
               1440: {
                 slidesPerView: 4,
+                spaceBetween: 24,
               },
             }}
           >
@@ -51,7 +53,7 @@ export function Plans() {
               return (
                 <SwiperSlide key={plan.id}>
                   <PlansCard
-                    color={plan.color}
+                    selected={plan.selected}
                     title={plan.title}
                     price={plan.price}
                     infos={plan.infos}

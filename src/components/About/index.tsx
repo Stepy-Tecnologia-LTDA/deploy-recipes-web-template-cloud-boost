@@ -28,7 +28,11 @@ export function About() {
       >
         <div className="hidden lg:flex flex-col gap-8">
           <div className="absolute left-0 top-12">
-            <Image src={EffectOne} alt="" />
+            <Image
+              src={EffectOne}
+              alt=""
+              className="rounded-tl-2xl rounded-bl-2xl"
+            />
           </div>
 
           <div className="absolute top-60 left-36">
@@ -36,7 +40,11 @@ export function About() {
           </div>
 
           <div className="absolute bottom-[154px] left-0">
-            <Image src={EffectThree} alt="" />
+            <Image
+              src={EffectThree}
+              alt=""
+              className="rounded-tl-2xl rounded-bl-2xl"
+            />
           </div>
 
           <div className="absolute bottom-0 left-64">

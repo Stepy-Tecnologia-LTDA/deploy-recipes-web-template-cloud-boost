@@ -16,7 +16,7 @@ export function FeedbackCard({
   office,
 }: FeedbackCardProps) {
   return (
-    <div className="w-full h-[354px] md:h-[362px] bg-white p-6 rounded-2xl flex flex-col gap-3 md:gap-4 relative">
+    <div className="w-full h-[362px] bg-white p-6 rounded-2xl flex flex-col gap-3 md:gap-4 relative">
       <div className="md:hidden flex items-center gap-2">
         <StarIcon />
         <StarIcon />

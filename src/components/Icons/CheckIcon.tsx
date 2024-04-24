@@ -1,13 +1,14 @@
 interface CheckIconProps {
   color?: string;
+  size?: number;
 }
 
-export function CheckIcon({ color = "#27272A" }: CheckIconProps) {
+export function CheckIcon({ color = "#27272A", size = 16 }: CheckIconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={14}
-      height={14}
+      width={size}
+      height={size}
       viewBox="0 0 14 14"
       fill="none"
     >

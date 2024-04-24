@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  variant?: "default" | "outlined";
+  variant?: "default" | "outlined" | "plan";
   size?: "default" | "small";
 }
 
@@ -18,6 +18,7 @@ const variantStyles = {
     "bg-primary-500 text-white hover:bg-primary-600 disabled:bg-primary-100 disabled:text-primary-400 active:bg-primary-700",
   outlined:
     "border border-primary-500 text-primary-500 hover:border-primary-600 hover:text-primary-600 disabled:border-primary-200 disabled:text-primary-200 active:border-primary-700 active:text-primary-700",
+  plan: "bg-white text-neutral-700",
 };
 
 export function Button({

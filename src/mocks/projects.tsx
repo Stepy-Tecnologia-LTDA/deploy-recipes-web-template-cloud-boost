@@ -164,7 +164,7 @@ export const plans = [
         info: "Technical Support: Email",
       },
     ],
-    color: false,
+    selected: false,
   },
   {
     id: 2,
@@ -192,7 +192,7 @@ export const plans = [
         info: "Advanced Features: Automated Backup",
       },
     ],
-    color: false,
+    selected: false,
   },
   {
     id: 3,
@@ -220,7 +220,7 @@ export const plans = [
         info: "Advanced Features: Automated Backup, Advanced Security",
       },
     ],
-    color: true,
+    selected: true,
   },
   {
     id: 4,
@@ -248,7 +248,7 @@ export const plans = [
         info: "Advanced Features: Custom",
       },
     ],
-    color: false,
+    selected: false,
   },
 ];
 

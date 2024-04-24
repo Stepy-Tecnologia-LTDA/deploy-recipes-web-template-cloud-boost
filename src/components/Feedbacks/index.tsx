@@ -25,8 +25,8 @@ export function Feedbacks() {
         <div className="pt-6 md:pt-12 lg:pt-24">
           <Swiper
             modules={[Pagination, Autoplay]}
-            slidesPerView={1}
-            spaceBetween={20}
+            slidesPerView={1.1}
+            spaceBetween={16}
             loop={true}
             pagination
             autoplay={{
@@ -35,10 +35,12 @@ export function Feedbacks() {
             }}
             breakpoints={{
               768: {
-                slidesPerView: 1.7,
+                slidesPerView: 1.8,
+                spaceBetween: 24,
               },
               1280: {
                 slidesPerView: 3,
+                spaceBetween: 24,
               },
             }}
           >
