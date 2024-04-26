@@ -20,7 +20,7 @@ const config: Config = {
           "300": "#72D9EE",
           "200": "#ACEAF5",
           "100": "#D3F5FA",
-          "050": "#D3F5FA",
+          "050": "#EDFCFE",
         },
         secodary: {
           "950": "#3E016A",

@@ -31,7 +31,7 @@ export function Plans() {
           <Swiper
             modules={[Pagination, Autoplay]}
             slidesPerView={1.2}
-            spaceBetween={16}
+            spaceBetween={-32}
             loop={true}
             pagination
             autoplay={{

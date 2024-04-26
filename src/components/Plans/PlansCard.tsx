@@ -20,7 +20,7 @@ export function PlansCard({ title, price, infos, selected }: PlansCardProps) {
   return (
     <div
       className={clsx(
-        "w-full px-4 py-8 rounded-2xl flex flex-col gap-6 md:gap-10 md:px-6 md:py-9 lg:h-[604px] lg:gap-12 lg:px-8 lg:py-10",
+        "w-full max-w-[230px] md:max-w-[294px] lg:max-w-[318px] px-4 py-8 rounded-2xl flex flex-col gap-6 md:gap-10 md:px-6 md:py-9 lg:h-[604px] lg:gap-12 lg:px-8 lg:py-10",
         selected
           ? "bg-primary-500 h-[430px] md:h-[562px] lg:h-[616px]"
           : "bg-primary-050 h-[422px] md:h-[556px] lg:h-[604px]"
@@ -55,9 +55,15 @@ export function PlansCard({ title, price, infos, selected }: PlansCardProps) {
       </div>
 
       <div className="absolute bottom-8 max-w-32 self-center lg:max-w-36 lg:bottom-10">
-        <Button variant="outlined" size="small" className={clsx("lg:hidden")}>
-          Get Started
-        </Button>
+        {selected ? (
+          <Button variant="plan" size="small" className={clsx("lg:hidden")}>
+            Get Started
+          </Button>
+        ) : (
+          <Button variant="outlined" size="small" className={clsx("lg:hidden")}>
+            Get Started
+          </Button>
+        )}
 
         {selected ? (
           <Button variant="plan" className={clsx("hidden lg:block")}>
