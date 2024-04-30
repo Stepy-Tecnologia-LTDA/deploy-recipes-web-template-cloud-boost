@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-wrapper {
+  @apply pb-6;
+}
+
 #plan .swiper-wrapper {
   display: flex;
   align-items: center;

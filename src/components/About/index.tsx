@@ -95,7 +95,7 @@ export function About() {
           <Swiper
             modules={[Pagination, Autoplay]}
             slidesPerView={1}
-            spaceBetween={20}
+            spaceBetween={16}
             loop={true}
             pagination
             autoplay={{
@@ -105,6 +105,7 @@ export function About() {
             breakpoints={{
               768: {
                 slidesPerView: 2.1,
+                spaceBetween: 20,
               },
             }}
           >
